@@ -11,6 +11,7 @@ import com.google.gson.Gson
 import com.sahil.demoapp.R
 import com.sahil.demoapp.base.BaseFragment
 import com.sahil.demoapp.databinding.FragmentDashboardBinding
+import com.sahil.demoapp.model.Topic
 import com.sahil.demoapp.model.TopicModel
 import com.sahil.demoapp.ui.dashboard.adapter.TopicAdapter
 import com.sahil.demoapp.utils.getJsonData
@@ -34,6 +35,13 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {
         super.onViewCreated(view, savedInstanceState)
         binding.vm=vm
         Log.e("Dashboard","Dashboard fragment")
+        vm.adapter.setClick(object : TopicAdapter.TopicClickListener{
+            override fun onclick(item:Topic) {
+                val bundle=Bundle()
+                bundle.putString("questions",Gson().toJson(item))
+                goNextFragment(R.id.action_dashboardFragment_to_questionAnswerFragment,bundle)
+            }
+        })
         vm.getTopicList()
     }
 }

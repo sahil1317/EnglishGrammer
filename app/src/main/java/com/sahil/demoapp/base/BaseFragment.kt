@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
 abstract class BaseFragment<T : ViewDataBinding> : Fragment() {
     lateinit var binding: T
@@ -16,5 +17,9 @@ abstract class BaseFragment<T : ViewDataBinding> : Fragment() {
        override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, layoutId(), container, false)
         return binding.root
+    }
+
+    fun goNextFragment(id:Int, bundle: Bundle?=null){
+        findNavController().navigate(id,bundle)
     }
 }

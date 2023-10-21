@@ -6,7 +6,7 @@
     <data>
         <variable
             name="model"
-            type="String" />
+            type="com.sahil.demoapp.model.Topic" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@tools:sample/lorem"
-            android:text="@{model}"/>
+            android:text="@{model.topic_name}"/>
 
         <View
             android:layout_width="match_parent"

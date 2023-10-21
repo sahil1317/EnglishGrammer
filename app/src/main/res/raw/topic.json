@@ -1,7 +1,133 @@
 {
   "topics": [
-    "Nouns",
-    "Pronouns",
-    "Articles"
-  ]
+    {
+      "topic_name": "Subject And Predicate",
+      "questions": [
+        {
+          "title": "In the following sentences separate the subject and the predicate.:",
+          "question": "The cackling of geese saved Rome.",
+          "answer": "myself",
+          "option": ["The","cackling","of","geese","saved","Rome"],
+          "description": "myself- Emphatic"
+        }
+      ]
+    },
+    {
+      "topic_name": "Nouns",
+      "questions": [
+        {
+          "title": "Point out the Nouns in the following sentences, and say whether they are Common, Proper, Collective or Abstract:",
+          "question": "The crowd was very big.",
+          "option": ["The", "crowd", "was", "very", "big"],
+          "answer": "crowd",
+          "description": "crowd - Collective"
+        },
+        {
+          "title": "Point out the Nouns in the following sentences, and say whether they are Common, Proper, Collective or Abstract:",
+          "question": "Always speak the truth.",
+          "answer": "truth",
+          "option": ["Always","speak","the" ,"truth"],
+
+          "description": "truth - Abstract"
+        },
+        {
+          "title": "Point out the Nouns in the following sentences, and say whether they are Common, Proper, Collective or Abstract:",
+          "question": "We all love honesty.",
+          "answer": "honesty",
+          "option": ["We","all", "love","honesty"],
+          "description": "honesty - Abstract"
+        },
+        {
+          "title": "Point out the Nouns in the following sentences, and say whether they are Common, Proper, Collective or Abstract:",
+          "question": "Our class consists of twenty pupils.",
+          "answer": "class,pupils",
+          "option": ["Our","class","consists","of","twenty","pupils"],
+          "description": "class- Collective; pupils- Common"
+        },
+        {
+          "title": "Point out the Nouns in the following sentences, and say whether they are Common, Proper, Collective or Abstract:",
+          "question": "The elephant has great strength.",
+          "answer": "elephant,strength",
+          "option": ["The","elephant","has","great","strength"],
+          "description": "elephant- common; strength- Abstract"
+        },
+        {
+          "title": "Point out the Nouns in the following sentences, and say whether they are Common, Proper, Collective or Abstract:",
+          "question": "Solomon was famous for his wisdom.",
+          "answer": "Solomon,wisdom",
+          "option": ["Solomon","was","famous","for","his","wisdom"],
+          "description": "Solomon- Proper; wisdom- Abstract"
+        },
+        {
+          "title": "Point out the Nouns in the following sentences, and say whether they are Common, Proper, Collective or Abstract:",
+          "question": "Cleanliness is next to godliness.",
+          "answer": "Cleanliness,godliness",
+          "option": ["Cleanliness","is","next","to","godliness"],
+          "description": "Cleanliness- Abstract; godliness- Abstract"
+        },
+        {
+          "title": "Point out the Nouns in the following sentences, and say whether they are Common, Proper, Collective or Abstract:",
+          "question": "We saw a fleet of ships in the harbour.",
+          "answer": "fleet, ships,harbour",
+          "option": ["We","saw","a","fleet","of","ships","in","the","harbour"],
+          "description": "fleet- Collective; ships- Common, harbour- Common"
+        },
+        {
+          "title": "Point out the Nouns in the following sentences, and say whether they are Common, Proper, Collective or Abstract:",
+          "question": "The class is studying grammar.",
+          "answer": "class,grammar",
+          "option": ["The","class","is","studying","grammar"],
+          "description": "class- Collective; grammar- Abstract"
+        },
+        {
+          "title": "Point out the Nouns in the following sentences, and say whether they are Common, Proper, Collective or Abstract:",
+          "question": "The Godavari overflows its banks every year.",
+          "answer": "Godavari,banks,year",
+          "option": ["The","Godavari","overflows","its","banks","every","year"],
+          "description": "Godavari- Proper; banks- Common, year-Common"
+        }
+      ]
+    },
+    {
+      "topic_name": "Pronouns",
+      "questions": [
+        {
+          "title": "Tell which Pronouns in the following sentences are Reflexive and which Emphatic:",
+          "question": "I will go myself.",
+          "answer": "myself",
+          "option": ["I","will","go","myself"],
+          "description": "myself- Emphatic"
+        },
+        {
+          "title": "Tell which Pronouns in the following sentences are Reflexive and which Emphatic:",
+          "question": "Rama has hurt himself.",
+          "answer": "himself",
+          "option": ["Rama","has","hurt","himself"],
+          "description": "myself- Reflexive"
+        },
+        {
+          "title": "Tell which Pronouns in the following sentences are Reflexive and which Emphatic:",
+          "question": "We often deceive ourselves.",
+          "answer": "ourselves",
+          "option": ["We","often","deceive","ourselves"],
+          "description": "ourselves- Reflexive"
+        },
+        {
+          "title": "Tell which Pronouns in the following sentences are Reflexive and which Emphatic:",
+          "question": "I myself heard the remark.",
+          "answer": "myself",
+          "option": ["I","myself","heard","the","remark"],
+          "description": "ourselves- Emphatic"
+        },
+        {
+          "title": "Tell which Pronouns in the following sentences are Reflexive and which Emphatic:",
+          "question": "You express yourself very imperfectly.",
+          "answer": "yourself",
+          "option": ["You","express","yourself","very","imperfectly"],
+          "description": "yourself- Reflexive"
+        }
+      ]
+    }
+
+   ]
 }

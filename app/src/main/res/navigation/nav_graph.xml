@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/dashboardFragment">
 
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.sahil.demoapp.ui.dashboard.DashboardFragment"
-        android:label="DashboardFragment" />
+        android:label="DashboardFragment" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_questionAnswerFragment"
+            app:destination="@id/questionAnswerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionAnswerFragment"
+        android:name="com.sahil.demoapp.ui.question_answer.QuestionAnswerFragment"
+        android:label="QuestionAnswerFragment" >
+        <action
+            android:id="@+id/action_questionAnswerFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.sahil.demoapp.ui.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
 </navigation>

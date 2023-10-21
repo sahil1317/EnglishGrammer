@@ -9,13 +9,14 @@ import com.sahil.demoapp.BR
 
 abstract class BaseAdapter <T,K:ViewDataBinding>() : RecyclerView.Adapter<BaseAdapter<T,K>.MyHolder>() {
 
-    lateinit var binding: K
 
     var list: ArrayList<T> = ArrayList()
 
  abstract  fun layoutId():Int
     inner class MyHolder(private val binding: K) : RecyclerView.ViewHolder(binding.root) {
+        lateinit var mBinding:K
         fun bind(item: T) {
+            mBinding=binding
             binding.setVariable(BR.model, item)
             binding.executePendingBindings()
         }
@@ -24,7 +25,7 @@ abstract class BaseAdapter <T,K:ViewDataBinding>() : RecyclerView.Adapter<BaseAd
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
-        binding = DataBindingUtil.inflate(LayoutInflater.from(parent.context), layoutId(), parent, false)
+       val binding :K = DataBindingUtil.inflate(LayoutInflater.from(parent.context), layoutId(), parent, false)
 
         return MyHolder(binding)
     }
