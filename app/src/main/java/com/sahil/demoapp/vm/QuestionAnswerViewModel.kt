@@ -89,10 +89,12 @@ class QuestionAnswerViewModel @Inject constructor() : ViewModel() {
             adapter.submitList(optionList)
             adapter.setClick(object :OptionsAdapter.TopicClickListener{
                 override fun onclick(item: Options,position: Int) {
+
                     item.isSelected = !item.isSelected
+                    Timber.e("Selected Value and position is:  ${position} ${item}")
                     optionList.set(position,item)
                     adapter.notifyDataSetChanged()
-                    adapter.notifyItemChanged(position)
+//                    adapter.notifyItemChanged(position)
 
                 }
             })

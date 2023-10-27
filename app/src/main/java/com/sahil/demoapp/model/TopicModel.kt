@@ -9,7 +9,7 @@ data class Topic(
     val topic_name: String
 )
 
-data class Question(
+data class Question(  
     val answer: String,
     val description: String,
     val question: String,

@@ -23,16 +23,19 @@ class OptionsAdapter @Inject constructor(): BaseAdapter<Options, OptionItemLayou
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
 
         holder.bind(list[position])
+        if(list[position].isSelected!=true){
+            holder.mBinding.optionTv.setTextColor(holder.itemView.context.getColor(R.color.white))
+            holder.mBinding.optionLayout.setCardBackgroundColor(holder.itemView.context.getColor(R.color.black))
 
+        }else{
+            holder.mBinding.optionTv.setTextColor(holder.itemView.context.getColor(R.color.white))
+            holder.mBinding.optionLayout.setCardBackgroundColor(holder.itemView.context.getColor(R.color.green))
+        }
+
+        holder.mBinding.optionTv.text=list[position].option
         holder.itemView.setOnClickListener{
-            if(list[position].isSelected!=true){
-                holder.mBinding.optionTv.setTextColor(holder.itemView.context.getColor(R.color.white))
-                holder.mBinding.optionLayout.setCardBackgroundColor(holder.itemView.context.getColor(R.color.green))
-            }else{
-                holder.mBinding.optionTv.setTextColor(holder.itemView.context.getColor(R.color.white))
-                holder.mBinding.optionLayout.setCardBackgroundColor(holder.itemView.context.getColor(R.color.black))
-            }
-            callback.onclick(list[position],position)
+         callback.onclick(list[position],position)
+            Timber.e("Check_Click---> ${Gson().toJson(list)}")
         }
     }
 
